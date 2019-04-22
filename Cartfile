@@ -1,0 +1,3 @@
+github "soffes/CommonCrypto"
+git "https://github.com/zhuhaow/NEKit" "master"
+github "xmartlabs/Eureka" ~> 4.0

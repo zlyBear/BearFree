@@ -24,7 +24,7 @@ class ViewController: FormViewController {
     let firstSection : Section = Section()
     
     var switchRow : SwitchRow = SwitchRow("switchRowTag"){
-        $0.title = "灵魂出窍"
+        $0.title = "熊出塞"
     }
 
     var status: VPNStatus {
@@ -46,7 +46,7 @@ class ViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.requestBaidu()
-        self.title = "Bear Fly Fly"
+        self.title = "Bear Free Fly"
         
         form +++ firstSection
             <<< TextRow("IP"){ row in
@@ -137,7 +137,6 @@ class ViewController: FormViewController {
         portRow?.evaluateDisabled()
         passwordRow?.evaluateDisabled()
         cryptoRow?.evaluateDisabled()
-//        switchRow.reload()
         
         VpnManager.shared.ip_address = defaultStand.string(forKey: userConfig().ip) ?? ""
         VpnManager.shared.port = Int(defaultStand.string(forKey: userConfig().port) ?? "0")!
@@ -145,12 +144,13 @@ class ViewController: FormViewController {
         VpnManager.shared.algorithm = defaultStand.string(forKey: userConfig().algorithm) ?? ""
     }
     
+    // 发起一个网络请求 获取系统网络访问权限
     func requestBaidu() {
         let url : URL = URL(string:"https://m.baidu.com")!
         let request : URLRequest = URLRequest(url: url)
         let session : URLSession = URLSession.shared
         let task : URLSessionDataTask = session.dataTask(with: request) { (data, response, error) in
-            print(response as Any)
+        
         }
         task.resume()
     }
