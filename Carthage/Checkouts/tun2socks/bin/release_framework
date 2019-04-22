@@ -1,0 +1,21 @@
+#!/bin/env sh
+
+carthage build --no-skip-current
+carthage archive tun2socks
+
+export GOPATH=$HOME/golang
+export PATH=$PATH:$GOPATH/bin
+go get github.com/aktau/github-release
+github-release release \
+  --user zhuhaow \
+  --repo tun2socks \
+  --tag $CIRCLE_TAG \
+  --name $CIRCLE_TAG \
+  --description $CIRCLE_TAG
+
+github-release upload \
+  --user zhuhaow \
+  --repo tun2socks \
+  --tag $CIRCLE_TAG \
+  --name tun2socks.framework.zip \
+  --file tun2socks.framework.zip

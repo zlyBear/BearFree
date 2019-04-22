@@ -1,0 +1,25 @@
+language: objective-c
+osx_image: xcode10.2
+cache:
+  directories:
+  - Carthage
+install:
+- bin/bootstrap-if-needed
+- bundle install
+script:
+- bundle exec fastlane scan --scheme Resolver-macOS
+- bundle exec fastlane scan --scheme Resolver-iOS
+after_success:
+- bash <(curl -s https://codecov.io/bash)
+before_deploy:
+- carthage build --no-skip-current
+- carthage archive Resolver
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: S9WVTJe6puQQnHIwUkee4DEi9QxRmnI8mBp0vXYamy48snvxM3YRRYndz3UtlZRqxXHmtaec+VmJ9CMQKSN5fcubpsAq2dbpRTy2ggE9841m+fAJ6VA1SmbP7x3TDVisnrzw8Im80MuSa9zGPZ7fgBJby3QSQhk4Uq/SK2tcUE2JeGoLfGYa/n1Q/JKr560vatfN7gdlM2t3PFDpuS7bEqoSaqbAxWtBC7vWTE25QMJ+5c1V6f84Tsnc5yQFZn/6TEgTbpq716UvgImeoL6v/5wZuDqtJY7NCD8Xs58wknDUE6/O8yVexPp3djp/EUB+b6TLoDfx9QOEwX5Tak7U8htZ4a0PCZyiDsk/ar76KywPmFFvWsG/1MOPAFJJ7Qn1XXQK2RgtmEzCY/K1EE1Yzo8MPFe9AEZ2m2BSeHa0SMMFqiUE8OCPPKoCZdPK87kdacgiL2kvU9XBnme5jdvpL8FOl1H3v5iSqhAFXqcpwPopPXHRz6XG6jd6Iko3eI01jwn42fKN3KdaCBThyhYxnX6RmsjdIBCbTbm+FhgHF4oZwDlqzUQIzVhWARz4tjfBczY7QyDyOOqBMnmQlXt0BsYRybr5ru3Su0hpgLqlA/cOJbFxUHBT3rD2kqZqPV6XyYWRf+iuxyAgyc2QBe8beCLGCZl24eBSeJ7RC5Lnums=
+  file: Resolver.framework.zip
+  on:
+    repo: zhuhaow/Resolver
+    tags: true

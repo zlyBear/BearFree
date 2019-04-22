@@ -1,0 +1,24 @@
+language: objective-c
+osx_image: xcode10.2
+install:
+- bundle install
+script:
+- bundle exec fastlane gym --scheme tun2socks-macOS --skip_archive 
+- bundle exec fastlane gym --scheme tun2socks-iOS --skip_archive --skip_package_ipa
+after_success:
+- "./docs/build_docs.sh"
+before_deploy:
+- carthage build --no-skip-current
+- carthage archive tun2socks lwip
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: SiemGEEB+PrLVjpXUsoRwWKDTY3GDLYgShxb/pTmsUgIhJi6nHnoBUou7XiD5BlMlqBroLa+4+cgCsqMDI03FhanlDZ14tw7rrQfE2JN8v79XYg0RzWZBfSfqycV8rOVYe5OfzRx8ky3m+BcHyxePexLHA1PTqg7twf66o7jnfJlNjAxcw9VCWeV9469+yp0ZWqeFsfk2eR9jsZv+S8pqj/VLCwtYKv9rLes1LPfJn8z24pYqjNpdeon1au73V30deheCd4ib+YHBAkJW4YbEM95/mkkTypd7j3PY+bIV0MOpRK2JMym8ohenN6r+kktYSeceORxs1icnNgSqd2gc7Jk5PB7g3saOn0MGqwI5e04qLRLyJUQAN/9b6uUX12f/aIHR7QaS0RFoFTXNwp4D7unAXA4y4kXyuxECPYekagspc9ikL9T1kOX2WgN8KlSCxX35gDSge6T+txTg8cSIPqc4f/4AJvJyfnHbDVB6YDckUdSKuF73i1MjLgPLcOWYD/yjfm0DbqzoQ9Efmv7fRnTRw4gOtTTuRSnxLT7p1ou6Abo+T9UvrSS7WHURn3+QU5yQW0FE2V8gT5S54ZJqPvEB2xs24NYbfkaF3sz9tDl1n3u+M3s1ZF1FOrp2Xf6mVVnUi8v/1UqnmJcNIxMyB2JIu87Fs7D+xSMWOXu2yo=
+  file: tun2socks.frameowrk.zip
+  on:
+    repo: zhuhaow/tun2socks
+    tags: true
+env:
+  global:
+    secure: AWLpWR/5CUlRZ69LfJR0MlWofEwNYwWNE+drb9bLFWwYoIsvk/hAzTHjkAm87aKsLdGqjHRFLX3E5dfrC3570gfyxFfFgpwMkwEyplc5w0AXhgnIdSU1iPFrTf828I7E+SvQ65m+I7rmnTWsVqkQ4+rTIWTpos5hYqkTnC9wLLLFLTi/b0raLNTQoYzEPtSRs93ZLcoABnTBa6MrSbHzI+oPTPSUdjN97N51URcB31VP1aF91fNiI32sdsnnmN0cuj7be22i280c5VvCv9D6XSeOjofkuLj1hnuyhXu38TwrauCpKJ79kvNu4Guop+4jQ2Mh5+leYiPZA7mu900kngN53WrHKp26IIHNRY+7Vw2qFDwkzgIW0djToDQNUFFDWmyGfuv6Ede7AyfZDrg3Vr3lD9YQEhJIU38AULU5BGIcK+c8OiGGiy/+63z0E4ZI8QhVIS/M/xJ7+DnxOYg2GvTL9x79yDDpnWAcqQvRgVnCvWsSMm/aUMN3Ah2GTWqfRaR6mXyJv0PZ6bAYr4YTzu065x6oCSDjaavcP7N/aW/TXT4dtxueUBQCgOjz2L3eotOHfxhLikHM+dbWG3xNDWqiD4b8hajm+dLd86oGza43hlhka3KDwPCYqX3XsKUEuVe/yWyELLihJrBG+rd62zqNZYWNkj03S8E+iQD9Ojo=

@@ -1,0 +1,778 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18E9141D2266C7B4005E6027 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9141C2266C7B4005E6027 /* AppDelegate.swift */; };
+		18E9141F2266C7B4005E6027 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9141E2266C7B4005E6027 /* ViewController.swift */; };
+		18E914222266C7B4005E6027 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E914202266C7B4005E6027 /* Main.storyboard */; };
+		18E914242266C7B5005E6027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E914232266C7B5005E6027 /* Assets.xcassets */; };
+		18E914272266C7B5005E6027 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E914252266C7B5005E6027 /* LaunchScreen.storyboard */; };
+		18E914322266C7B5005E6027 /* BearSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E914312266C7B5005E6027 /* BearSSTests.swift */; };
+		18E914432266C9B3005E6027 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E914422266C9B3005E6027 /* PacketTunnelProvider.swift */; };
+		18E914482266C9B3005E6027 /* PacketTunnel.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 18E914402266C9B3005E6027 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		18E91468226717E2005E6027 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91455226717AF005E6027 /* CocoaAsyncSocket.framework */; };
+		18E91469226717E2005E6027 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91454226717AE005E6027 /* CocoaLumberjack.framework */; };
+		18E9146A226717E2005E6027 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91457226717AF005E6027 /* CocoaLumberjackSwift.framework */; };
+		18E9146B226717E2005E6027 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9145A226717AF005E6027 /* CommonCrypto.framework */; };
+		18E9146C226717E2005E6027 /* MMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91459226717AF005E6027 /* MMDB.framework */; };
+		18E9146D226717E2005E6027 /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91452226717AE005E6027 /* Resolver.framework */; };
+		18E9146E226717E2005E6027 /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9145C226717AF005E6027 /* Sodium.framework */; };
+		18E9146F226717E2005E6027 /* lwip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91453226717AE005E6027 /* lwip.framework */; };
+		18E91470226717E2005E6027 /* tun2socks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91456226717AF005E6027 /* tun2socks.framework */; };
+		18E91471226717E2005E6027 /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91458226717AF005E6027 /* Yaml.framework */; };
+		18E91472226717E2005E6027 /* NEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9145B226717AF005E6027 /* NEKit.framework */; };
+		18E9147422671B28005E6027 /* VpnManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9147322671B28005E6027 /* VpnManager.swift */; };
+		18E914832267210E005E6027 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91455226717AF005E6027 /* CocoaAsyncSocket.framework */; };
+		18E914842267210E005E6027 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91454226717AE005E6027 /* CocoaLumberjack.framework */; };
+		18E914852267210E005E6027 /* CocoaLumberjackSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91457226717AF005E6027 /* CocoaLumberjackSwift.framework */; };
+		18E914862267210E005E6027 /* CommonCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9145A226717AF005E6027 /* CommonCrypto.framework */; };
+		18E914872267210E005E6027 /* lwip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91453226717AE005E6027 /* lwip.framework */; };
+		18E914882267210E005E6027 /* MMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91459226717AF005E6027 /* MMDB.framework */; };
+		18E914892267210E005E6027 /* NEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9145B226717AF005E6027 /* NEKit.framework */; };
+		18E9148A2267210E005E6027 /* Resolver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91452226717AE005E6027 /* Resolver.framework */; };
+		18E9148B2267210E005E6027 /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9145C226717AF005E6027 /* Sodium.framework */; };
+		18E9148C2267210E005E6027 /* tun2socks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91456226717AF005E6027 /* tun2socks.framework */; };
+		18E9148D2267210E005E6027 /* Yaml.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E91458226717AF005E6027 /* Yaml.framework */; };
+		18E914902267213F005E6027 /* CocoaAsyncSocket.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E91455226717AF005E6027 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E914912267213F005E6027 /* CocoaLumberjack.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E91454226717AE005E6027 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E914922267213F005E6027 /* CocoaLumberjackSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E91457226717AF005E6027 /* CocoaLumberjackSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E914932267213F005E6027 /* CommonCrypto.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E9145A226717AF005E6027 /* CommonCrypto.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E914942267213F005E6027 /* lwip.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E91453226717AE005E6027 /* lwip.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E914952267213F005E6027 /* MMDB.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E91459226717AF005E6027 /* MMDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E914962267213F005E6027 /* NEKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E9145B226717AF005E6027 /* NEKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E914972267213F005E6027 /* Resolver.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E91452226717AE005E6027 /* Resolver.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E914982267213F005E6027 /* Sodium.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E9145C226717AF005E6027 /* Sodium.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E914992267213F005E6027 /* tun2socks.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E91456226717AF005E6027 /* tun2socks.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E9149A2267213F005E6027 /* Yaml.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E91458226717AF005E6027 /* Yaml.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18E9149C2267220B005E6027 /* NEKitRule.conf in Resources */ = {isa = PBXBuildFile; fileRef = 18E9149B2267220B005E6027 /* NEKitRule.conf */; };
+		18E9149E22672644005E6027 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9149D22672644005E6027 /* NetworkExtension.framework */; };
+		18E9149F22672657005E6027 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9149D22672644005E6027 /* NetworkExtension.framework */; };
+		18E914A122672C91005E6027 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E914A022672C91005E6027 /* Eureka.framework */; };
+		18E914A222672DBB005E6027 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E914A022672C91005E6027 /* Eureka.framework */; };
+		18E914A322672DBB005E6027 /* Eureka.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E914A022672C91005E6027 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18E9142E2266C7B5005E6027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18E914112266C7B4005E6027 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18E914182266C7B4005E6027;
+			remoteInfo = BearSS;
+		};
+		18E914462266C9B3005E6027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18E914112266C7B4005E6027 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18E9143F2266C9B3005E6027;
+			remoteInfo = PacketTunnel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		18E9144C2266C9B3005E6027 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				18E914482266C9B3005E6027 /* PacketTunnel.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E9148F2267211F005E6027 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				18E914902267213F005E6027 /* CocoaAsyncSocket.framework in CopyFiles */,
+				18E914912267213F005E6027 /* CocoaLumberjack.framework in CopyFiles */,
+				18E914922267213F005E6027 /* CocoaLumberjackSwift.framework in CopyFiles */,
+				18E914932267213F005E6027 /* CommonCrypto.framework in CopyFiles */,
+				18E914942267213F005E6027 /* lwip.framework in CopyFiles */,
+				18E914952267213F005E6027 /* MMDB.framework in CopyFiles */,
+				18E914962267213F005E6027 /* NEKit.framework in CopyFiles */,
+				18E914972267213F005E6027 /* Resolver.framework in CopyFiles */,
+				18E914982267213F005E6027 /* Sodium.framework in CopyFiles */,
+				18E914A322672DBB005E6027 /* Eureka.framework in CopyFiles */,
+				18E914992267213F005E6027 /* tun2socks.framework in CopyFiles */,
+				18E9149A2267213F005E6027 /* Yaml.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		18E914192266C7B4005E6027 /* BearFree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BearFree.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E9141C2266C7B4005E6027 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18E9141E2266C7B4005E6027 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18E914212266C7B4005E6027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18E914232266C7B5005E6027 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18E914262266C7B5005E6027 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18E914282266C7B5005E6027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E9142D2266C7B5005E6027 /* BearFreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BearFreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E914312266C7B5005E6027 /* BearSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearSSTests.swift; sourceTree = "<group>"; };
+		18E914332266C7B5005E6027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E914402266C9B3005E6027 /* PacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E914422266C9B3005E6027 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
+		18E914442266C9B3005E6027 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E914452266C9B3005E6027 /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
+		18E9144F22671181005E6027 /* BearSS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BearSS.entitlements; sourceTree = "<group>"; };
+		18E91452226717AE005E6027 /* Resolver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Resolver.framework; path = Carthage/Build/iOS/Resolver.framework; sourceTree = "<group>"; };
+		18E91453226717AE005E6027 /* lwip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = lwip.framework; path = Carthage/Build/iOS/lwip.framework; sourceTree = "<group>"; };
+		18E91454226717AE005E6027 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		18E91455226717AF005E6027 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		18E91456226717AF005E6027 /* tun2socks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = tun2socks.framework; path = Carthage/Build/iOS/tun2socks.framework; sourceTree = "<group>"; };
+		18E91457226717AF005E6027 /* CocoaLumberjackSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjackSwift.framework; path = Carthage/Build/iOS/CocoaLumberjackSwift.framework; sourceTree = "<group>"; };
+		18E91458226717AF005E6027 /* Yaml.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Yaml.framework; path = Carthage/Build/iOS/Yaml.framework; sourceTree = "<group>"; };
+		18E91459226717AF005E6027 /* MMDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MMDB.framework; path = Carthage/Build/iOS/MMDB.framework; sourceTree = "<group>"; };
+		18E9145A226717AF005E6027 /* CommonCrypto.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonCrypto.framework; path = Carthage/Build/iOS/CommonCrypto.framework; sourceTree = "<group>"; };
+		18E9145B226717AF005E6027 /* NEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NEKit.framework; path = Carthage/Build/iOS/NEKit.framework; sourceTree = "<group>"; };
+		18E9145C226717AF005E6027 /* Sodium.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sodium.framework; path = Carthage/Build/iOS/Sodium.framework; sourceTree = "<group>"; };
+		18E9147322671B28005E6027 /* VpnManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VpnManager.swift; sourceTree = "<group>"; };
+		18E9149B2267220B005E6027 /* NEKitRule.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NEKitRule.conf; sourceTree = "<group>"; };
+		18E9149D22672644005E6027 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		18E914A022672C91005E6027 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18E914162266C7B4005E6027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E914A122672C91005E6027 /* Eureka.framework in Frameworks */,
+				18E914A222672DBB005E6027 /* Eureka.framework in Frameworks */,
+				18E914832267210E005E6027 /* CocoaAsyncSocket.framework in Frameworks */,
+				18E9149E22672644005E6027 /* NetworkExtension.framework in Frameworks */,
+				18E914842267210E005E6027 /* CocoaLumberjack.framework in Frameworks */,
+				18E914852267210E005E6027 /* CocoaLumberjackSwift.framework in Frameworks */,
+				18E914862267210E005E6027 /* CommonCrypto.framework in Frameworks */,
+				18E914872267210E005E6027 /* lwip.framework in Frameworks */,
+				18E914882267210E005E6027 /* MMDB.framework in Frameworks */,
+				18E914892267210E005E6027 /* NEKit.framework in Frameworks */,
+				18E9148A2267210E005E6027 /* Resolver.framework in Frameworks */,
+				18E9148B2267210E005E6027 /* Sodium.framework in Frameworks */,
+				18E9148C2267210E005E6027 /* tun2socks.framework in Frameworks */,
+				18E9148D2267210E005E6027 /* Yaml.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E9142A2266C7B5005E6027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E9143D2266C9B3005E6027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E91468226717E2005E6027 /* CocoaAsyncSocket.framework in Frameworks */,
+				18E9149F22672657005E6027 /* NetworkExtension.framework in Frameworks */,
+				18E91469226717E2005E6027 /* CocoaLumberjack.framework in Frameworks */,
+				18E9146A226717E2005E6027 /* CocoaLumberjackSwift.framework in Frameworks */,
+				18E9146B226717E2005E6027 /* CommonCrypto.framework in Frameworks */,
+				18E9146C226717E2005E6027 /* MMDB.framework in Frameworks */,
+				18E9146D226717E2005E6027 /* Resolver.framework in Frameworks */,
+				18E9146E226717E2005E6027 /* Sodium.framework in Frameworks */,
+				18E9146F226717E2005E6027 /* lwip.framework in Frameworks */,
+				18E91470226717E2005E6027 /* tun2socks.framework in Frameworks */,
+				18E91471226717E2005E6027 /* Yaml.framework in Frameworks */,
+				18E91472226717E2005E6027 /* NEKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18E914102266C7B4005E6027 = {
+			isa = PBXGroup;
+			children = (
+				18E9141B2266C7B4005E6027 /* BearSS */,
+				18E914302266C7B5005E6027 /* BearSSTests */,
+				18E914412266C9B3005E6027 /* PacketTunnel */,
+				18E9141A2266C7B4005E6027 /* Products */,
+				AE2E93114404A35E87606173 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		18E9141A2266C7B4005E6027 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18E914192266C7B4005E6027 /* BearFree.app */,
+				18E9142D2266C7B5005E6027 /* BearFreeTests.xctest */,
+				18E914402266C9B3005E6027 /* PacketTunnel.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18E9141B2266C7B4005E6027 /* BearSS */ = {
+			isa = PBXGroup;
+			children = (
+				18E9149B2267220B005E6027 /* NEKitRule.conf */,
+				18E9144F22671181005E6027 /* BearSS.entitlements */,
+				18E9141C2266C7B4005E6027 /* AppDelegate.swift */,
+				18E9141E2266C7B4005E6027 /* ViewController.swift */,
+				18E9147322671B28005E6027 /* VpnManager.swift */,
+				18E914202266C7B4005E6027 /* Main.storyboard */,
+				18E914232266C7B5005E6027 /* Assets.xcassets */,
+				18E914252266C7B5005E6027 /* LaunchScreen.storyboard */,
+				18E914282266C7B5005E6027 /* Info.plist */,
+			);
+			path = BearSS;
+			sourceTree = "<group>";
+		};
+		18E914302266C7B5005E6027 /* BearSSTests */ = {
+			isa = PBXGroup;
+			children = (
+				18E914312266C7B5005E6027 /* BearSSTests.swift */,
+				18E914332266C7B5005E6027 /* Info.plist */,
+			);
+			path = BearSSTests;
+			sourceTree = "<group>";
+		};
+		18E914412266C9B3005E6027 /* PacketTunnel */ = {
+			isa = PBXGroup;
+			children = (
+				18E914422266C9B3005E6027 /* PacketTunnelProvider.swift */,
+				18E914442266C9B3005E6027 /* Info.plist */,
+				18E914452266C9B3005E6027 /* PacketTunnel.entitlements */,
+			);
+			path = PacketTunnel;
+			sourceTree = "<group>";
+		};
+		AE2E93114404A35E87606173 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18E914A022672C91005E6027 /* Eureka.framework */,
+				18E9149D22672644005E6027 /* NetworkExtension.framework */,
+				18E91455226717AF005E6027 /* CocoaAsyncSocket.framework */,
+				18E91454226717AE005E6027 /* CocoaLumberjack.framework */,
+				18E91457226717AF005E6027 /* CocoaLumberjackSwift.framework */,
+				18E9145A226717AF005E6027 /* CommonCrypto.framework */,
+				18E91453226717AE005E6027 /* lwip.framework */,
+				18E91459226717AF005E6027 /* MMDB.framework */,
+				18E9145B226717AF005E6027 /* NEKit.framework */,
+				18E91452226717AE005E6027 /* Resolver.framework */,
+				18E9145C226717AF005E6027 /* Sodium.framework */,
+				18E91456226717AF005E6027 /* tun2socks.framework */,
+				18E91458226717AF005E6027 /* Yaml.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18E914182266C7B4005E6027 /* BearFree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18E914362266C7B5005E6027 /* Build configuration list for PBXNativeTarget "BearFree" */;
+			buildPhases = (
+				18E914152266C7B4005E6027 /* Sources */,
+				18E914162266C7B4005E6027 /* Frameworks */,
+				18E914172266C7B4005E6027 /* Resources */,
+				18E9144C2266C9B3005E6027 /* Embed App Extensions */,
+				18E9148F2267211F005E6027 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18E914472266C9B3005E6027 /* PBXTargetDependency */,
+			);
+			name = BearFree;
+			productName = BearSS;
+			productReference = 18E914192266C7B4005E6027 /* BearFree.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18E9142C2266C7B5005E6027 /* BearFreeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18E914392266C7B5005E6027 /* Build configuration list for PBXNativeTarget "BearFreeTests" */;
+			buildPhases = (
+				18E914292266C7B5005E6027 /* Sources */,
+				18E9142A2266C7B5005E6027 /* Frameworks */,
+				18E9142B2266C7B5005E6027 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18E9142F2266C7B5005E6027 /* PBXTargetDependency */,
+			);
+			name = BearFreeTests;
+			productName = BearSSTests;
+			productReference = 18E9142D2266C7B5005E6027 /* BearFreeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18E9143F2266C9B3005E6027 /* PacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18E914492266C9B3005E6027 /* Build configuration list for PBXNativeTarget "PacketTunnel" */;
+			buildPhases = (
+				18E9143C2266C9B3005E6027 /* Sources */,
+				18E9143D2266C9B3005E6027 /* Frameworks */,
+				18E9143E2266C9B3005E6027 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PacketTunnel;
+			productName = PacketTunnel;
+			productReference = 18E914402266C9B3005E6027 /* PacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18E914112266C7B4005E6027 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = zly;
+				TargetAttributes = {
+					18E914182266C7B4005E6027 = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+							com.apple.VPNLite = {
+								enabled = 1;
+							};
+						};
+					};
+					18E9142C2266C7B5005E6027 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 18E914182266C7B4005E6027;
+					};
+					18E9143F2266C9B3005E6027 = {
+						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+							com.apple.VPNLite = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 18E914142266C7B4005E6027 /* Build configuration list for PBXProject "BearFree" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18E914102266C7B4005E6027;
+			productRefGroup = 18E9141A2266C7B4005E6027 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18E914182266C7B4005E6027 /* BearFree */,
+				18E9142C2266C7B5005E6027 /* BearFreeTests */,
+				18E9143F2266C9B3005E6027 /* PacketTunnel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18E914172266C7B4005E6027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E914272266C7B5005E6027 /* LaunchScreen.storyboard in Resources */,
+				18E9149C2267220B005E6027 /* NEKitRule.conf in Resources */,
+				18E914242266C7B5005E6027 /* Assets.xcassets in Resources */,
+				18E914222266C7B4005E6027 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E9142B2266C7B5005E6027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E9143E2266C9B3005E6027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18E914152266C7B4005E6027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E9141F2266C7B4005E6027 /* ViewController.swift in Sources */,
+				18E9141D2266C7B4005E6027 /* AppDelegate.swift in Sources */,
+				18E9147422671B28005E6027 /* VpnManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E914292266C7B5005E6027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E914322266C7B5005E6027 /* BearSSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18E9143C2266C9B3005E6027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E914432266C9B3005E6027 /* PacketTunnelProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18E9142F2266C7B5005E6027 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18E914182266C7B4005E6027 /* BearFree */;
+			targetProxy = 18E9142E2266C7B5005E6027 /* PBXContainerItemProxy */;
+		};
+		18E914472266C9B3005E6027 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18E9143F2266C9B3005E6027 /* PacketTunnel */;
+			targetProxy = 18E914462266C9B3005E6027 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18E914202266C7B4005E6027 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18E914212266C7B4005E6027 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18E914252266C7B5005E6027 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18E914262266C7B5005E6027 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18E914342266C7B5005E6027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		18E914352266C7B5005E6027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18E914372266C7B5005E6027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BearSS/BearSS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PN45C5W9UV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = BearSS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zly.BearSS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18E914382266C7B5005E6027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BearSS/BearSS.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PN45C5W9UV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = BearSS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zly.BearSS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		18E9143A2266C7B5005E6027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PN45C5W9UV;
+				INFOPLIST_FILE = BearSSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zly.BearSSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BearFree.app/BearFree";
+			};
+			name = Debug;
+		};
+		18E9143B2266C7B5005E6027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PN45C5W9UV;
+				INFOPLIST_FILE = BearSSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zly.BearSSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BearFree.app/BearFree";
+			};
+			name = Release;
+		};
+		18E9144A2266C9B3005E6027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PN45C5W9UV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zly.BearSS.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18E9144B2266C9B3005E6027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = PacketTunnel/PacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PN45C5W9UV;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = PacketTunnel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zly.BearSS.PacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18E914142266C7B4005E6027 /* Build configuration list for PBXProject "BearFree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E914342266C7B5005E6027 /* Debug */,
+				18E914352266C7B5005E6027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18E914362266C7B5005E6027 /* Build configuration list for PBXNativeTarget "BearFree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E914372266C7B5005E6027 /* Debug */,
+				18E914382266C7B5005E6027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18E914392266C7B5005E6027 /* Build configuration list for PBXNativeTarget "BearFreeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E9143A2266C7B5005E6027 /* Debug */,
+				18E9143B2266C7B5005E6027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18E914492266C9B3005E6027 /* Build configuration list for PBXNativeTarget "PacketTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18E9144A2266C9B3005E6027 /* Debug */,
+				18E9144B2266C9B3005E6027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18E914112266C7B4005E6027 /* Project object */;
+}
