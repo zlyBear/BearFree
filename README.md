@@ -10,7 +10,7 @@
 
 在创建应用之前我们需要安装**NEProviderTargetTemplates.pkg**，在xcode10.12之后苹果在xcode中删除了这个文件，为什么？可能和中国区被下架的那些VXN一样的原因吧。好在我们还可以从老版本的xcode中提取这个文件，链接在此[点击下载](https://pan.baidu.com/s/1p-HxTtJr64RbzSuE33tyYw) ，提取码：**18ek**，要低调，安装好后重启xcode。
 
-#### 创建工程
+### 创建工程
 
 接下来我们开始创建工程，首先和创建普通App一样创建一个Project
 
@@ -40,7 +40,7 @@
 
 好了，到此工程就创建好了。
 
-#### NEKit集成
+### NEKit集成
 
 由于项目中使用的NEKit这个第三方库只支持Carthage进行集成管理，所以demo使用的集成工具也是Carthage，没有用过的可以自行Google，安装使用难度不高，一看即会。
 
@@ -56,7 +56,7 @@
 
 至此相关环境配置就已经搞定了，下面开始看代码如何建立VXN链接
 
-#### 创建VXN Manager
+### 创建VXN Manager
 
 首先需要创建一个NETunnelProviderManager
 
@@ -102,7 +102,7 @@ NETunnelProviderManager.loadAllFromPreferencesWithCompletionHandler{
 }
 ```
 
-#### 配置Network Extension
+### 配置Network Extension
 
 打开extension中的模板文件，对应Swift版本与父类修改语法。主要需要以下两个函数控制VPN状态
 
@@ -133,7 +133,7 @@ override func startTunnel(options: [String : NSObject]?, completionHandler: @esc
 }
 ```
 
-#### 开启VXN
+### 开启VXN
 
 对刚刚创建的manager调用startVPNTunnel方法即可
 
@@ -176,7 +176,7 @@ func addVPNStatusObserver() {
 }
 ```
 
-#### VXN配置(IP、端口等)
+### VXN配置(IP、端口等)
 
 manager通过protocolConfiguration的属性向Network Extension传递配置信息，在vpnManager中实现如下配置方法，并在启动vpn前调用即可
 
@@ -203,7 +203,7 @@ public var protocolConfiguration: NEVPNProtocol { get }
 
 存入了上面写入的配置信息，我们可以直接读取。
 
-#### 关于网络状态的改变 
+### 关于网络状态的改变 
 
 4G与wifi切换，这里确实有点坑，在里面绕了很久，一开始调试发现vxn是通的，但是过段时间就不能用了，删了重装也不行，无意中改了一个extension中的ip又好用了，换了网络环境又不能用了，百思不得其解，debug了半天也没找到问题，下面先说下怎么如何监听网络环境变化：
 
@@ -236,12 +236,12 @@ override func observeValue(forKeyPath keyPath: String?, of object: Any?, change:
 
 ![](http://lyz0818.5166.info//20190423121036_XaOOXa_Screenshot.jpeg)
 
-#### demoUI
+### demoUI
 
 UI层我直接使用了Eureka这个第三方框架，它是XLForm的swift版本，也是通过carthage集成，想了解的也可以看下demo。
 
 
 
-#### The End
+### The End
 
 好了，这两天 碰到的问题应该都讲清楚了，有问题可以和我交流，如果有不对的地方希望指正，3Q！
