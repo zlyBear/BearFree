@@ -52,7 +52,7 @@
 
 ![](http://lyz0818.5166.info//20190422171252_Y994p5_Screenshot.jpeg)
 
-![](http://lyz0818.5166.info//20190422171706_L5Mzuo_Screenshot.jpeg)
+![](http://lyz0818.5166.info//img/20190422171706_L5Mzuo_Screenshot.png?markdown)
 
 至此相关环境配置就已经搞定了，下面开始看代码如何建立VXN链接
 
@@ -77,7 +77,7 @@ fileprivate func createProviderManager() -> NETunnelProviderManager {
 manager.saveToPreferences{
     error in
         if error != nil{print(error);return;}
-        /Todo
+        //Todo
 }
 ```
 
