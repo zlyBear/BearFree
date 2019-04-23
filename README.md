@@ -62,12 +62,12 @@
 
 ```swift
 fileprivate func createProviderManager() -> NETunnelProviderManager {
-let manager = NETunnelProviderManager()
-let conf = NETunnelProviderProtocol()
-conf.serverAddress = "BearFree"
-manager.protocolConfiguration = conf
-manager.localizedDescription = "BearFree"
-return manager
+    let manager = NETunnelProviderManager()
+    let conf = NETunnelProviderProtocol()
+    conf.serverAddress = "BearFree"
+    manager.protocolConfiguration = conf
+    manager.localizedDescription = "BearFree"
+    return manager
 }
 ```
 
@@ -75,9 +75,9 @@ return manager
 
 ```swift
 manager.saveToPreferences{
-error in
-if error != nil{print(error);return;}
-//Todo
+    error in
+        if error != nil{print(error);return;}
+        /Todo
 }
 ```
 
@@ -89,16 +89,16 @@ if error != nil{print(error);return;}
 
 ```swift
 NETunnelProviderManager.loadAllFromPreferencesWithCompletionHandler{ 
-(managers, error) in
-guard let managers = managers else{return}
-let manager: NETunnelProviderManager
-if managers.count > 0 {
-manager = managers[0]
-}else{
-manager = self.createProviderManager()
-}
-// Todo
-// manager.saveToPreferences.......
+    (managers, error) in
+    guard let managers = managers else{return}
+    let manager: NETunnelProviderManager
+    if managers.count > 0 {
+        manager = managers[0]
+    }else{
+        manager = self.createProviderManager()
+    }
+    // Todo
+    // manager.saveToPreferences.......
 }
 ```
 
@@ -118,18 +118,18 @@ func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping 
 
 ```swift
 override func startTunnel(options: [String : NSObject]?, completionHandler: @escaping (Error?) -> Void) {
-let ipv4Settings = NEIPv4Settings(addresses: ["192.169.89.1"], subnetMasks: ["255.255.255.0"])
-let networkSettings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: "8.8.8.8")
-networkSettings.mtu = 1500
-networkSettings.iPv4Settings = ipv4Settings
-setTunnelNetworkSettings(networkSettings) {
-error in
-guard error == nil else {
-completionHandler(error)
-return
-}
-completionHandler(nil)
-}
+    let ipv4Settings = NEIPv4Settings(addresses: ["192.169.89.1"], subnetMasks: ["255.255.255.0"])
+    let networkSettings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: "8.8.8.8")
+    networkSettings.mtu = 1500
+    networkSettings.iPv4Settings = ipv4Settings
+    setTunnelNetworkSettings(networkSettings) {
+        error in
+        guard error == nil else {
+            completionHandler(error)
+            return
+        }
+            completionHandler(nil)
+    }
 }
 ```
 
@@ -145,14 +145,14 @@ try manager.connection.startVPNTunnel(options: [:])
 
 ```swift
 func connect(){
-self.loadAndCreatePrividerManager { (manager) in
-guard let manager = manager else{return}
-do{
-try manager.connection.startVPNTunnel(options: [:])
-}catch let err{
-print(err)
-}
-}
+    self.loadAndCreatePrividerManager { (manager) in
+        guard let manager = manager else{return}
+        do{
+            try manager.connection.startVPNTunnel(options: [:])
+        }catch let err{
+            print(err)
+        }
+    }
 }
 ```
 
@@ -162,17 +162,17 @@ print(err)
 
 ```swift
 func addVPNStatusObserver() {
-guard !observerAdded else{
-return
-}
-loadProviderManager { [unowned self] (manager) -> Void in
-if let manager = manager {
-self.observerAdded = true
-NotificationCenter.default.addObserver(forName: NSNotification.Name.NEVPNStatusDidChange, object: manager.connection, queue: OperationQueue.main, using: { [unowned self] (notification) -> Void in
-self.updateVPNStatus(manager)
-})
-}
-}
+    guard !observerAdded else{
+        return
+    }
+    loadProviderManager { [unowned self] (manager) -> Void in
+        if let manager = manager {
+            self.observerAdded = true
+            NotificationCenter.default.addObserver(forName: NSNotification.Name.NEVPNStatusDidChange, object: manager.connection, queue: OperationQueue.main, using: { [unowned self] (notification) -> Void in
+                self.updateVPNStatus(manager)
+                })
+            }
+        }
 }
 ```
 
@@ -182,16 +182,16 @@ manager通过protocolConfiguration的属性向Network Extension传递配置信�
 
 ```swift
 fileprivate func setRulerConfig(_ manager:NETunnelProviderManager){
-var conf = [String:AnyObject]()
-conf["ss_address"] = ip_address as AnyObject?
-conf["ss_port"] = port as AnyObject?
-conf["ss_method"] = algorithm as AnyObject? // 大写 没有横杠 看Extension中的枚举类设定 否则引发fatal error
-conf["ss_password"] = password as AnyObject?
-conf["ymal_conf"] = getRuleConf() as AnyObject?
-let orignConf = manager.protocolConfiguration as! NETunnelProviderProtocol
-orignConf.providerConfiguration = conf
-manager.protocolConfiguration = orignConf
-print(ip_address,port,algorithm,password)
+    var conf = [String:AnyObject]()
+    conf["ss_address"] = ip_address as AnyObject?
+    conf["ss_port"] = port as AnyObject?
+    conf["ss_method"] = algorithm as AnyObject? // 大写 没有横杠 看Extension中的枚举类设定 否则引发fatal error
+    conf["ss_password"] = password as AnyObject?
+    conf["ymal_conf"] = getRuleConf() as AnyObject?
+    let orignConf = manager.protocolConfiguration as! NETunnelProviderProtocol
+    orignConf.providerConfiguration = conf
+    manager.protocolConfiguration = orignConf
+    print(ip_address,port,algorithm,password)
 }
 ```
 
@@ -213,22 +213,22 @@ NEProvider 中存在属性`public var defaultPath: NWPath? { get }` 表明当前
 
 ```swift
 override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-if keyPath == "defaultPath" {
-if self.defaultPath?.status == .satisfied && self.defaultPath != lastPath{
-if(lastPath == nil){
-lastPath = self.defaultPath
-}else{
-NSLog("received network change notifcation")
-DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
-// 延迟1s确保系统就绪
-guard let strongSelf = self else { return }
-strongSelf.startTunnel(options: nil){ _ in }
-}
-}
-}else{
-lastPath = defaultPath
-}
-}
+    if keyPath == "defaultPath" {
+        if self.defaultPath?.status == .satisfied && self.defaultPath != lastPath{
+            if(lastPath == nil){
+                lastPath = self.defaultPath
+            }else{
+                NSLog("received network change notifcation")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [weak self] in
+                // 延迟1s确保系统就绪
+                    guard let strongSelf = self else { return }
+                    strongSelf.startTunnel(options: nil){ _ in }
+                }
+            }
+        }else{
+            lastPath = defaultPath
+        }
+    }
 }
 ```
 
