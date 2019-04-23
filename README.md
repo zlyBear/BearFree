@@ -2,11 +2,9 @@
 
 本文简要介绍iOS中NetworkExtension在提供安全科学（双弯道）使用G高级搜索引擎、Y视频等App简单应用，同时使用了第三方库NEKit提供路由规则支持。
 
-> 部分内容借鉴了称一称的[初探iOS Network Extension](https://www.jianshu.com/p/5ed93a8a1449)的文章内容
+> Demo代码已适配swift5，点击[GitHub链接](https://github.com/zlyBear/BearFree/tree/master)查看。
 >
-> demo代码已适配swift5，点击[GitHub链接](https://github.com/zlyBear/BearFree/tree/master)查看。
->
-> demo运行需要有开发者账号，修改bundle id，在自己的开发者账号进行注册。
+> Demo运行需要有开发者账号，修改bundle id，在自己的开发者账号进行注册。
 
 在创建应用之前我们需要安装**NEProviderTargetTemplates.pkg**，在xcode10.12之后苹果在xcode中删除了这个文件，为什么？可能和中国区被下架的那些VXN一样的原因吧。好在我们还可以从老版本的xcode中提取这个文件，链接在此[点击下载](https://pan.baidu.com/s/1p-HxTtJr64RbzSuE33tyYw) ，提取码：**18ek**，要低调，安装好后重启xcode。
 
@@ -236,7 +234,7 @@ override func observeValue(forKeyPath keyPath: String?, of object: Any?, change:
 
 ![](http://lyz0818.5166.info//20190423121036_XaOOXa_Screenshot.jpeg)
 
-### demoUI
+### DemoUI
 
 UI层我直接使用了Eureka这个第三方框架，它是XLForm的swift版本，也是通过carthage集成，想了解的也可以看下demo。
 
@@ -244,4 +242,4 @@ UI层我直接使用了Eureka这个第三方框架，它是XLForm的swift版本�
 
 ### The End
 
-好了，这两天 碰到的问题应该都讲清楚了，有问题可以和我交流，如果有不对的地方希望指正，3Q！
+好了，我碰到的问题应该都讲清楚了，有问题可以和我交流，如果有不对的地方希望指正，3Q！
