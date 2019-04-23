@@ -53,7 +53,6 @@
 		18E9149E22672644005E6027 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9149D22672644005E6027 /* NetworkExtension.framework */; };
 		18E9149F22672657005E6027 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9149D22672644005E6027 /* NetworkExtension.framework */; };
 		18E914A122672C91005E6027 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E914A022672C91005E6027 /* Eureka.framework */; };
-		18E914A222672DBB005E6027 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E914A022672C91005E6027 /* Eureka.framework */; };
 		18E914A322672DBB005E6027 /* Eureka.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E914A022672C91005E6027 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
@@ -147,10 +146,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E914A122672C91005E6027 /* Eureka.framework in Frameworks */,
-				18E914A222672DBB005E6027 /* Eureka.framework in Frameworks */,
-				18E914832267210E005E6027 /* CocoaAsyncSocket.framework in Frameworks */,
 				18E9149E22672644005E6027 /* NetworkExtension.framework in Frameworks */,
+				18E914A122672C91005E6027 /* Eureka.framework in Frameworks */,
+				18E914832267210E005E6027 /* CocoaAsyncSocket.framework in Frameworks */,
 				18E914842267210E005E6027 /* CocoaLumberjack.framework in Frameworks */,
 				18E914852267210E005E6027 /* CocoaLumberjackSwift.framework in Frameworks */,
 				18E914862267210E005E6027 /* CommonCrypto.framework in Frameworks */,

@@ -1,9 +1,9 @@
 //
 //  VpnManager.swift
-//  rabbit
+//  BearFree
 //
-//  Created by CYC on 2016/11/19.
-//  Copyright © 2016年 yicheng. All rights reserved.
+//  Created by zly on 2019/4/17.
+//  Copyright © 2019 zly. All rights reserved.
 //
 
 let kProxyServiceVPNStatusNotification = "kProxyServiceVPNStatusNotification"
@@ -88,9 +88,9 @@ extension VpnManager{
     fileprivate func createProviderManager() -> NETunnelProviderManager {
         let manager = NETunnelProviderManager()
         let conf = NETunnelProviderProtocol()
-        conf.serverAddress = "BearS"
+        conf.serverAddress = "BearFree"
         manager.protocolConfiguration = conf
-        manager.localizedDescription = "BearSS"
+        manager.localizedDescription = "BearFree"
         return manager
     }
     
