@@ -1,5 +1,7 @@
 ## iOS中NetworkExtension安全科学冲浪应用(Swift5)
 
+**如果觉得对你有用，请点个星星，谢咯！**
+
 本文简要介绍iOS中NetworkExtension在提供安全科学（双弯道）使用G高级搜索引擎、Y视频等App简单应用，同时使用了第三方库NEKit提供路由规则支持。
 
 > Demo代码已适配swift5，点击[GitHub链接](https://github.com/zlyBear/BearFree/tree/master)查看。
