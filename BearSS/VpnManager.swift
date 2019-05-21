@@ -11,6 +11,12 @@ let kProxyServiceVPNStatusNotification = "kProxyServiceVPNStatusNotification"
 import Foundation
 import NetworkExtension
 
+struct userConfig {
+    let ip = "ip"
+    let port = "port"
+    let password = "password"
+    let algorithm = "algorithm"
+}
 
 enum VPNStatus {
     case off
@@ -109,7 +115,10 @@ extension VpnManager{
             manager.isEnabled = true
             self.setRulerConfig(manager)
             manager.saveToPreferences{
-                if $0 != nil{complete(nil);return;}
+                if ($0 != nil){
+//                    complete(nil);
+//                    return;
+                }
                 manager.loadFromPreferences{
                     if $0 != nil{
                         print($0.debugDescription)
@@ -163,7 +172,9 @@ extension VpnManager{
     }
     
     func disconnect(){
-        loadProviderManager{$0?.connection.stopVPNTunnel()}
+        loadProviderManager{
+            $0?.connection.stopVPNTunnel()
+        }
     }
 }
 

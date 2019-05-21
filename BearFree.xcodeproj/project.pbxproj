@@ -54,6 +54,13 @@
 		18E9149F22672657005E6027 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9149D22672644005E6027 /* NetworkExtension.framework */; };
 		18E914A122672C91005E6027 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E914A022672C91005E6027 /* Eureka.framework */; };
 		18E914A322672DBB005E6027 /* Eureka.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 18E914A022672C91005E6027 /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		18F3C6422293D7F800D79C4A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18F3C62D2293D7BB00D79C4A /* NotificationCenter.framework */; };
+		18F3C6452293D7F800D79C4A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3C6442293D7F800D79C4A /* TodayViewController.swift */; };
+		18F3C6482293D7F800D79C4A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F3C6462293D7F800D79C4A /* MainInterface.storyboard */; };
+		18F3C64C2293D7F800D79C4A /* freeWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 18F3C6412293D7F800D79C4A /* freeWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		18F3C6512293DBF200D79C4A /* VpnManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E9147322671B28005E6027 /* VpnManager.swift */; };
+		18F3C6522293E40400D79C4A /* NEKitRule.conf in Resources */ = {isa = PBXBuildFile; fileRef = 18E9149B2267220B005E6027 /* NEKitRule.conf */; };
+		18F3C6552293EEBF00D79C4A /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E9149D22672644005E6027 /* NetworkExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +78,13 @@
 			remoteGlobalIDString = 18E9143F2266C9B3005E6027;
 			remoteInfo = PacketTunnel;
 		};
+		18F3C64A2293D7F800D79C4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18E914112266C7B4005E6027 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18F3C6402293D7F800D79C4A;
+			remoteInfo = freeWidget;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,6 +94,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				18F3C64C2293D7F800D79C4A /* freeWidget.appex in Embed App Extensions */,
 				18E914482266C9B3005E6027 /* PacketTunnel.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -139,6 +154,12 @@
 		18E9149B2267220B005E6027 /* NEKitRule.conf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NEKitRule.conf; sourceTree = "<group>"; };
 		18E9149D22672644005E6027 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		18E914A022672C91005E6027 /* Eureka.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Eureka.framework; path = Carthage/Build/iOS/Eureka.framework; sourceTree = "<group>"; };
+		18F3C62D2293D7BB00D79C4A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		18F3C6412293D7F800D79C4A /* freeWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = freeWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		18F3C6442293D7F800D79C4A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		18F3C6472293D7F800D79C4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		18F3C6492293D7F800D79C4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18F3C6502293D85D00D79C4A /* freeWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = freeWidget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +209,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18F3C63E2293D7F800D79C4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F3C6422293D7F800D79C4A /* NotificationCenter.framework in Frameworks */,
+				18F3C6552293EEBF00D79C4A /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -197,6 +227,7 @@
 				18E9141B2266C7B4005E6027 /* BearSS */,
 				18E914302266C7B5005E6027 /* BearSSTests */,
 				18E914412266C9B3005E6027 /* PacketTunnel */,
+				18F3C6432293D7F800D79C4A /* freeWidget */,
 				18E9141A2266C7B4005E6027 /* Products */,
 				AE2E93114404A35E87606173 /* Frameworks */,
 			);
@@ -208,6 +239,7 @@
 				18E914192266C7B4005E6027 /* BearFree.app */,
 				18E9142D2266C7B5005E6027 /* BearFreeTests.xctest */,
 				18E914402266C9B3005E6027 /* PacketTunnel.appex */,
+				18F3C6412293D7F800D79C4A /* freeWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -247,6 +279,17 @@
 			path = PacketTunnel;
 			sourceTree = "<group>";
 		};
+		18F3C6432293D7F800D79C4A /* freeWidget */ = {
+			isa = PBXGroup;
+			children = (
+				18F3C6502293D85D00D79C4A /* freeWidget.entitlements */,
+				18F3C6442293D7F800D79C4A /* TodayViewController.swift */,
+				18F3C6462293D7F800D79C4A /* MainInterface.storyboard */,
+				18F3C6492293D7F800D79C4A /* Info.plist */,
+			);
+			path = freeWidget;
+			sourceTree = "<group>";
+		};
 		AE2E93114404A35E87606173 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +306,7 @@
 				18E9145C226717AF005E6027 /* Sodium.framework */,
 				18E91456226717AF005E6027 /* tun2socks.framework */,
 				18E91458226717AF005E6027 /* Yaml.framework */,
+				18F3C62D2293D7BB00D79C4A /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -284,6 +328,7 @@
 			);
 			dependencies = (
 				18E914472266C9B3005E6027 /* PBXTargetDependency */,
+				18F3C64B2293D7F800D79C4A /* PBXTargetDependency */,
 			);
 			name = BearFree;
 			productName = BearSS;
@@ -325,6 +370,23 @@
 			productReference = 18E914402266C9B3005E6027 /* PacketTunnel.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		18F3C6402293D7F800D79C4A /* freeWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18F3C64D2293D7F800D79C4A /* Build configuration list for PBXNativeTarget "freeWidget" */;
+			buildPhases = (
+				18F3C63D2293D7F800D79C4A /* Sources */,
+				18F3C63E2293D7F800D79C4A /* Frameworks */,
+				18F3C63F2293D7F800D79C4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = freeWidget;
+			productName = freeWidget;
+			productReference = 18F3C6412293D7F800D79C4A /* freeWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -338,6 +400,9 @@
 					18E914182266C7B4005E6027 = {
 						CreatedOnToolsVersion = 10.2;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.NetworkExtensions.iOS = {
 								enabled = 1;
 							};
@@ -353,6 +418,20 @@
 					18E9143F2266C9B3005E6027 = {
 						CreatedOnToolsVersion = 10.2;
 						SystemCapabilities = {
+							com.apple.NetworkExtensions.iOS = {
+								enabled = 1;
+							};
+							com.apple.VPNLite = {
+								enabled = 1;
+							};
+						};
+					};
+					18F3C6402293D7F800D79C4A = {
+						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.NetworkExtensions.iOS = {
 								enabled = 1;
 							};
@@ -379,6 +458,7 @@
 				18E914182266C7B4005E6027 /* BearFree */,
 				18E9142C2266C7B5005E6027 /* BearFreeTests */,
 				18E9143F2266C9B3005E6027 /* PacketTunnel */,
+				18F3C6402293D7F800D79C4A /* freeWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -406,6 +486,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18F3C63F2293D7F800D79C4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F3C6482293D7F800D79C4A /* MainInterface.storyboard in Resources */,
+				18F3C6522293E40400D79C4A /* NEKitRule.conf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +527,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		18F3C63D2293D7F800D79C4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F3C6512293DBF200D79C4A /* VpnManager.swift in Sources */,
+				18F3C6452293D7F800D79C4A /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -450,6 +548,11 @@
 			isa = PBXTargetDependency;
 			target = 18E9143F2266C9B3005E6027 /* PacketTunnel */;
 			targetProxy = 18E914462266C9B3005E6027 /* PBXContainerItemProxy */;
+		};
+		18F3C64B2293D7F800D79C4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18F3C6402293D7F800D79C4A /* freeWidget */;
+			targetProxy = 18F3C64A2293D7F800D79C4A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -468,6 +571,14 @@
 				18E914262266C7B5005E6027 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		18F3C6462293D7F800D79C4A /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18F3C6472293D7F800D79C4A /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -731,6 +842,46 @@
 			};
 			name = Release;
 		};
+		18F3C64E2293D7F800D79C4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = freeWidget/freeWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PN45C5W9UV;
+				INFOPLIST_FILE = freeWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zly.BearSS.freeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18F3C64F2293D7F800D79C4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = freeWidget/freeWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PN45C5W9UV;
+				INFOPLIST_FILE = freeWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zly.BearSS.freeWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -766,6 +917,15 @@
 			buildConfigurations = (
 				18E9144A2266C9B3005E6027 /* Debug */,
 				18E9144B2266C9B3005E6027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18F3C64D2293D7F800D79C4A /* Build configuration list for PBXNativeTarget "freeWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F3C64E2293D7F800D79C4A /* Debug */,
+				18F3C64F2293D7F800D79C4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

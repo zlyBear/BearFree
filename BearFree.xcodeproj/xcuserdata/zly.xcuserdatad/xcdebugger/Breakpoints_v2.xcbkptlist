@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BearSS/ViewController.swift"
-            timestampString = "577627681.90264"
+            filePath = "PacketTunnel/PacketTunnelProvider.swift"
+            timestampString = "580120406.499916"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "stopTunnel(with:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
