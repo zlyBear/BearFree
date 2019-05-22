@@ -19,25 +19,24 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         VpnManager.shared.port = Int(defaultStand!.string(forKey: userConfig().port) ?? "0")!
         VpnManager.shared.password = defaultStand!.string(forKey: userConfig().password) ?? ""
         VpnManager.shared.algorithm = defaultStand!.string(forKey: userConfig().algorithm) ?? ""
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
-            self.ipLabel.text = "\(VpnManager.shared.ip_address) : \(String(VpnManager.shared.port))"
-            if VpnManager.shared.vpnStatus == .on {
-                self.switchButton.setOn(true, animated: false)
-            } else {
-                self.switchButton.setOn(false, animated: false)
-            }
-        }
-        
-        
-        // Do any additional setup after loading the view.
     }
         
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
-        // Perform any setup necessary in order to update the view.
+        let str = "IP    ：\(VpnManager.shared.ip_address)\nPort：\(String(VpnManager.shared.port))"
+        //通过富文本来设置行间距
+        let paraph = NSMutableParagraphStyle()
+        //将行间距设置为15
+        paraph.lineSpacing = 15
+        //样式属性集合
+        let attributes = [NSAttributedString.Key.font:UIFont.systemFont(ofSize: 15),
+                          NSAttributedString.Key.paragraphStyle: paraph]
+        self.ipLabel.attributedText = NSAttributedString(string: str, attributes: attributes)
         
-        // If an error is encountered, use NCUpdateResult.Failed
-        // If there's no update required, use NCUpdateResult.NoData
-        // If there's an update, use NCUpdateResult.NewData
+        if VpnManager.shared.vpnStatus == .on {
+            self.switchButton.setOn(true, animated: false)
+        } else {
+            self.switchButton.setOn(false, animated: false)
+        }
         
         completionHandler(NCUpdateResult.newData)
     }
@@ -50,3 +49,5 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
 }
+
+
